@@ -1,0 +1,13 @@
+{% comment %}
+1 minuno = 180 palavras
+2 minunos = 360 palavras
+3 minunos = 540 palavras / 180
+{% endcomment %}
+
+{% assign palavras = content | number_of_words %}
+
+{% if palavras < 360 %}
+    {% assign tempoDeLeitura = '1 minuto para leitura.' %}
+{% else %}
+    {% assign tempoDeLeitura = palavras | divided_by: 180 | append: ' minutos para leitura.' %}
+{% endif %}

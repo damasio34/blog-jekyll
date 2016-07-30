@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<script id="dsq-count-scr" src="//blog-jekyll-1.disqus.com/count.js" async></script>
+<div class="content list">
+    {% if site.posts.size == 0 %}
+        <h2>Nenhum post encontrado</h2>
+    {% else %}
+        {% for post in site.posts %}
+            <div class="list-item">
+                <h2 class="list-post-title">
+                  <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">{{ post.title }}</a>
+                </h2>
+                <div class="list-post-date">
+                    <time>{{ post.date | date_to_string }}</time> - <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span>
+                </div>
+            </div>
+            {% endfor %}
+    {% endif %}
+</div>
