@@ -10,7 +10,7 @@ title: Blog jekyll
 email: damasio34@gmail.com
 description: Esse é um blog criado para entender como funcina a ferramenta jekyll
 baseurl: "/blog_jekyll" # the subpath of your site, e.g. /blog
-url: "http://damasio34.com.com" # the base hostname & protocol for your site
+url: "http://damasio34.github.io" # the base hostname & protocol for your site
 twitter_username: damasio34
 github_username:  damasio34
 
